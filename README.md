@@ -76,14 +76,14 @@ as possible.  Deriving this ChangeSet enables efficient updates (with animation)
 ### diffing 2 DataView's
 What is the minimal amount of changes between these 2 DataView's?
 
-_placeholder for image_
+![diff example 1](list_diff_1.png)
 
 1. Delete Clear
 2. Move Objc.io
 
 What about this one?
 
-_placeholder for image_
+![diff example 2](list_diff_2.png)
 
 1. Delete Clear
 2. Delete Mailbox
