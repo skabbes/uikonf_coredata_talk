@@ -90,8 +90,8 @@ What about this one?
 
 Think about this, how would you express this to UITableView?
 
-1. `[Delete(2), Delete(2)]`
-2. `[Delete(2), Delete(3)]`
+1. `[Delete(1), Delete(1)]`
+2. `[Delete(1), Delete(2)]`
 
 Turns out, NSTableView wants option 1, UITableView wants option 2. NSTableView wants a consistent view of data after 
 each update.  We struggled with this problem for a bit, the easy solution was to just write 2 separate sets of code
@@ -99,7 +99,7 @@ for each, but that defeats the purpose of a shared library :(
 
 However, if you apple the updates _in the correct order_, you don't need to do index shuffling...
 
-`[Delete(3), Delete(2)]` works for both!
+`[Delete(2), Delete(1)]` works for both!
 
 1. Deletes in descending order
 2. Inserts in ascending order
@@ -108,7 +108,6 @@ However, if you apple the updates _in the correct order_, you don't need to do i
 After we built this, and looked back on the solution - we ended up accidentally accomplishing things we didn't mean to.
 * data locality
 * perf improvements (not at first though, we stupidly ported over some optimizations that made CoreData faster, but SQLite slower)
-* batch read / batch write (CoreData may well have this, but we couldn't easily access it in our small abstraction over it)
 * ability to trivially move from sqlite (we separated ChangeSet calculation from Query completely)
 
 ### questions? file an issue!
