@@ -39,7 +39,7 @@ can generate xcode projects, android makefiles, unix makefiles, and even visual 
 [JSON description](https://github.com/skabbes/mx3/blob/develop/mx3.gyp)
 * the Java Native Interface (JNI) is terrible to work with
   - this is a property of Java, not Android.  Google has the ability to fix this specifically for android
-  - I believe in the community to building tooling to mitigate this
+  - I believe the community will build tooling to mitigate this
 
 ### Can such a small team rewrite CoreData?
 That _is not_ what we tried to do, we didn't aim to rewrite CoreData (would be fun though).  We didn't try to even
