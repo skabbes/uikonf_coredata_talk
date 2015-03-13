@@ -36,7 +36,7 @@ front of us was to **either rewrite Mailbox in Java or C++**.
 * NDK build system is hard / confusing
   - it is, but we were lucky enough to find the Google's meta-build system, [gyp](https://code.google.com/p/gyp/) which
 can generate xcode projects, android makefiles, unix makefiles, and even visual studio projects from a
-[JSON description](https://github.com/skabbes/mx3/blob/develop/mx3.gyp)
+[JSON description](https://github.com/libmx3/mx3/blob/master/mx3.gyp)
 * the Java Native Interface (JNI) is terrible to work with
   - this is a property of Java, not Android.  Google has the ability to fix this specifically for android
   - I believe the community will build tooling to mitigate this
